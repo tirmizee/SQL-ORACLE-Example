@@ -23,6 +23,6 @@
 
 ### DISTINCT
 
-    SELECT DISTINCT * FROM employee;
+    SELECT DISTINCT * FROM employee;  -- No different SELECT * 
     SELECT DISTINCT emp_code FROM employee;
     SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
