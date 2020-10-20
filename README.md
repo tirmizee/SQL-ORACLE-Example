@@ -83,6 +83,8 @@
 
 ### MINUS
 
+### UNION & UNION ALL
+
 #### Using SUBSTR
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
