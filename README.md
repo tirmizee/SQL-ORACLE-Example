@@ -46,6 +46,8 @@
         END AS POSITION
     FROM employee ORDER BY emp_code;
 
+#### DECODE 
+
 ### DISTINCT
 
     SELECT DISTINCT * FROM employee;  -- No different SELECT * 
