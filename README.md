@@ -20,7 +20,17 @@
         emp_last_name    AS last_name,
         manager_id      
     FROM EMPLOYEE WHERE 1=2; 
-
+    /
+    SELECT 
+        emp_code,
+        CASE 
+            WHEN emp_first_name = 'Pratyaya' AND emp_last_name = 'Yeekhaday' THEN 'JAVA DEVELOPEE'
+            WHEN emp_first_name = 'Smith'    AND emp_last_name = 'Ompang'    THEN 'JAVA DEVELOPEE'
+            WHEN emp_first_name = 'Muhammad' AND emp_last_name = 'Lohmah'    THEN 'JAVA DEVELOPEE'
+            ELSE 'PROGRAMMER'
+        END AS POSITION
+    FROM employee ORDER BY emp_code;
+    
 ### CASE 
 
     SELECT 
