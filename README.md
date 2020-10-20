@@ -93,6 +93,11 @@
 
 ### TRUNCATE 
 
+    TRUNCATE TABLE schema_name.table_name
+    [CASCADE]
+    [[ PRESERVE | PURGE] MATERIALIZED VIEW LOG ]]
+    [[ DROP | REUSE]] STORAGE ]
+
 #### Using SUBSTR
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
