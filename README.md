@@ -40,3 +40,9 @@
     CONCAT(string1,string2)
     
 #### Using CONCAT
+
+    SELECT CONCAT('Hello','World') FROM DUAL;                --HelloWorld
+    SELECT CONCAT('Hello',CONCAT('World','2020')) FROM DUAL; --HelloWorld2020
+
+    SELECT 'Hello' || 'World' FROM DUAL;                     --HelloWorld
+    SELECT 'Hello' || 'World' || '2020' FROM DUAL;           --HelloWorld2020
