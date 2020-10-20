@@ -87,6 +87,10 @@
 
 ### SEQUENCE 
 
+### COUNT
+
+### MAX & MIN
+
 #### Using SUBSTR
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
