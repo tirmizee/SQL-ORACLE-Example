@@ -1,7 +1,7 @@
 # SQL-ORACLE-Example
 
 
-### Create Table
+### CREATE TABLE
 
 #### Create table from copy another table
 
@@ -20,3 +20,5 @@
         emp_last_name    AS last_name,
         manager_id      
     FROM EMPLOYEE WHERE 1=2; 
+
+### DISTINCT
