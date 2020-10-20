@@ -22,3 +22,7 @@
     FROM EMPLOYEE WHERE 1=2; 
 
 ### DISTINCT
+
+    SELECT DISTINCT * FROM employee;
+    SELECT DISTINCT emp_code FROM employee;
+    SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
