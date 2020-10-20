@@ -48,6 +48,21 @@
 
 #### DECODE 
 
+    SELECT 
+        DECODE('Tirmizee','Tirmizee','Tirmizee','Sorry')
+    FROM DUAL;
+
+    SELECT 
+        DECODE(
+            EMP_CODE,
+            'EM001','Tirmizee1',
+            'EM002','Tirmizee2',
+            'EM003','Tirmizee3',
+            'EM004','Tirmizee4',
+            'Sorry'
+        )
+    FROM employee  ORDER BY emp_code;
+
 ### DISTINCT
 
     SELECT DISTINCT * FROM employee;  -- No different SELECT * 
