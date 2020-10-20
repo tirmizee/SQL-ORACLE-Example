@@ -46,7 +46,7 @@
         END AS POSITION
     FROM employee ORDER BY emp_code;
 
-#### DECODE 
+### DECODE 
 
     SELECT 
         DECODE('Tirmizee','Tirmizee','Tirmizee','Sorry')
@@ -70,6 +70,8 @@
     SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
 
 ### SUBSTR 
+
+### LPAD & RPAD 
 
 #### Using SUBSTR
 
