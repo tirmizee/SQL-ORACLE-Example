@@ -10,3 +10,13 @@
 #### Create table from copy another table and data
 
     CREATE TABLE TEMP_EMPLOYEE AS SELECT * FROM EMPLOYEE
+
+#### Create table from copy another table with custom field
+
+    CREATE TABLE TEMP_EMPLOYEE AS SELECT 
+        emp_id           AS id,
+        emp_code         AS code,
+        emp_first_name   AS first_name,
+        emp_last_name    AS last_name,
+        manager_id      
+    FROM EMPLOYEE WHERE 1=2; 
