@@ -21,6 +21,8 @@
         manager_id      
     FROM EMPLOYEE WHERE 1=2; 
 
+### CASE 
+
 ### DISTINCT
 
     SELECT DISTINCT * FROM employee;  -- No different SELECT * 
