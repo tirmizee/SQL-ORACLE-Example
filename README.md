@@ -69,9 +69,15 @@
     SELECT DISTINCT emp_code FROM employee;
     SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
 
-### SUBSTR 
-
 ### LPAD & RPAD 
+
+### NVL 
+
+### NVL2 
+
+### COALESCE 
+
+### SUBSTR 
 
 #### Using SUBSTR
 
