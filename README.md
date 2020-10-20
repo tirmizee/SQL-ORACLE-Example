@@ -23,6 +23,19 @@
 
 ### CASE 
 
+    SELECT 
+        emp_code,
+        emp_first_name,
+        emp_last_name,
+        CASE manager_id
+            WHEN 1 THEN 'JAVA DEVELOPEE'
+            WHEN 2 THEN 'PHP DEVELOPER'
+            WHEN 3 THEN 'C# DEVELOPER'
+            WHEN 4 THEN 'JS DEVELOPER'
+            ELSE 'PROGRAMMER'
+        END AS POSITION
+    FROM employee ORDER BY emp_code;
+
 ### DISTINCT
 
     SELECT DISTINCT * FROM employee;  -- No different SELECT * 
