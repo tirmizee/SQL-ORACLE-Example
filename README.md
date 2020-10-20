@@ -26,3 +26,9 @@
     SELECT DISTINCT * FROM employee;  -- No different SELECT * 
     SELECT DISTINCT emp_code FROM employee;
     SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
+
+### SUBSTR 
+
+    SELECT SUBSTR('Pratya Yeekhaday',1,1) FROM DUAL; --P
+    SELECT SUBSTR('Pratya Yeekhaday',1,6) FROM DUAL; --Pratya
+    SELECT SUBSTR('Pratya Yeekhaday',3,9) FROM DUAL; --atya Yeek
