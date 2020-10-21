@@ -287,9 +287,7 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         (SELECT COUNT(*) FROM profile)  AS count_of_profile
     FROM DUAL;
 
-### MAX
-
-### MIN
+### MIN & MAX
 
     CREATE TABLE emp (
       empno    NUMBER(4) CONSTRAINT pk_emp PRIMARY KEY,
@@ -318,17 +316,22 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     INSERT INTO emp_salary VALUES (7934,'MILLER','CLERK',7782,to_date('23-1-1982','dd-mm-yyyy'),1300,NULL,10);
     COMMIT;
 
-#### MIN syntax
+#### MIN & MAX syntax
 
     MIN([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
+    MAX([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
 
-#### MIN with simple
+#### MIN & MAX with simple
 
     SELECT  MIN(sal) FROM emp_salary;
     SELECT  MIN(NVL(sal,0)) FROM emp_salary;
     SELECT  MIN(DISTINCT NVL(sal,0)) FROM emp_salary;
+    
+    SELECT  MAX(sal) FROM emp_salary;
+    SELECT  MAX(NVL(sal,0)) FROM emp_salary;
+    SELECT  MAX(DISTINCT NVL(sal,0)) FROM emp_salary;
 
-#### MIN with GROUP BY
+#### MIN & MAX with GROUP BY
 
     SELECT 
         deptno,
@@ -336,8 +339,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM  emp_salary
     GROUP BY deptno
     ORDER BY deptno;
+    
+    SELECT 
+        deptno,
+        MAX(sal) AS min_sal
+    FROM  emp_salary
+    GROUP BY deptno
+    ORDER BY deptno;
 
-#### MIN with OVER PARTITION BY
+#### MIN & MAX with OVER PARTITION BY
 
     SELECT 
         empno,     
@@ -345,6 +355,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         deptno,
         sal,
         MIN(sal) OVER (PARTITION BY deptno) AS min_sal
+    FROM emp_salary
+    ORDER BY deptno;
+    
+    SELECT 
+        empno,     
+        ename,
+        deptno,
+        sal,
+        MAX(sal) OVER (PARTITION BY deptno) AS min_sal
     FROM emp_salary
     ORDER BY deptno;
 
