@@ -162,11 +162,21 @@
 
 ### COALESCE 
 
-COALESCE function aims to return a non-NULL value
+COALESCE function aims to return a non-NULL value. You must specify at least two expressions.
 
 #### COALESCE syntax
 
     COALESCE ( expr1, expr2, [expr…])
+
+#### COALESCE with simple
+
+    SELECT
+        COALESCE(emp_code, name ) AS COALESCE
+    FROM salary;
+    -- is equivalent to
+    SELECT
+        CASE WHEN emp_code IS NOT NULL THEN emp_code ELSE name END
+    FROM salary;
 
 ### SUBSTR 
 
