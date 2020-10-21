@@ -357,7 +357,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### SUM
 
-
 #### SUM with simple
 
     SELECT 
@@ -392,6 +391,31 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM emp_salary;
 
 ### AVG
+
+### AVG with simple
+
+    SELECT 
+        AVG(sal) AS mean_sal
+    FROM emp_salary;
+
+### AVG with GROUP BY
+
+    SELECT 
+        deptno,
+        AVG(sal) AS mean_sal
+    FROM emp_salary
+    GROUP BY deptno
+    ORDER BY deptno;
+
+### AVG with OVER PARTITION BY
+
+    SELECT
+        empno,
+        ename,
+        deptno,
+        sal,
+        AVG(sal) OVER (PARTITION BY deptno) AS mean_sal_by_dept
+    FROM emp_salary;
 
 ### COUNT
 
