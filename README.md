@@ -458,6 +458,21 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         COUNT(*) OVER (PARTITION BY deptno) AS amount_by_dept
     FROM emp_salary;
 
+### LISTAGG 
+
+#### LISTAGG with simple
+
+    SELECT 
+        LISTAGG(ename, ',') WITHIN GROUP (ORDER BY ename) AS employees
+    FROM emp_salary where deptno = 20
+
+    SELECT 
+        deptno, 
+        LISTAGG(ename, ',') WITHIN GROUP (ORDER BY ename) AS employees
+    FROM emp_salary
+    GROUP BY deptno
+    ORDER BY deptno;
+
 ### EXTRACT
 
 ### TRUNCATE 
