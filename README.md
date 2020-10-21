@@ -289,6 +289,12 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### MAX & MIN
 
+#### MIN syntax
+
+    MIN([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
+
+#### MAX & MIN with simple
+
     SELECT 
         MAX(salary),       -- 49867.14
         MIN(NVL(salary,0)) -- 0
