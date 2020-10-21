@@ -122,6 +122,12 @@
 
     SELECT COUNT(*) FROM employee;
 
+    SELECT
+        (SELECT COUNT(*) FROM employee) AS count_of_employee,
+        (SELECT COUNT(*) FROM users) AS count_of_users,
+        (SELECT COUNT(*) FROM profile) AS count_of_profile
+    FROM DUAL;
+
 ### MAX & MIN
 
 ### SUM
