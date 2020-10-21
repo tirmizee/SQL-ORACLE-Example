@@ -102,6 +102,17 @@
 
 ### SUBSTR 
 
+### SELECT
+
+    SELECT
+        CASE value
+            WHEN '1' THEN (SELECT COUNT(*) FROM employee)
+            WHEN '2' THEN (SELECT COUNT(*) FROM users)
+            WHEN '3' THEN (SELECT COUNT(*) FROM profile)
+            ELSE (SELECT COUNT(*) FROM employee)
+        END AS COUNT
+    FROM app_setting;
+
 #### Using SUBSTR
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
