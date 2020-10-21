@@ -94,7 +94,7 @@
 
 ### LPAD & RPAD 
 
-#### LPAD & RPAD  syntax
+#### LPAD & RPAD syntax
 
     LPAD( string1, padded_length , [pad_string] )
     RPAD( string1, padded_length , [pad_string] )
@@ -116,6 +116,33 @@
     FROM dual;
 
 ### NVL 
+
+#### NVL syntax
+
+    NVL (exp, replacement-exp)
+
+#### NVL with simple
+
+    CREATE TABLE salary (
+        id NUMBER(19,0),
+        emp_code NVARCHAR2(50),
+        salary NUMBER(10,2) NOT NULL
+    );
+
+    insert into salary SELECT
+        ROWNUM,
+        employee.emp_code,
+        dbms_random.value(1,50000)
+    from employee where ROWNUM <= 100;
+
+    SELECT
+        NVL(salary,0) + 100 AS total
+    FROM salary;
+
+    SELECT
+        NVL(emp_code,'XXX') AS CODE
+    FROM salary
+
 
 ### NVL2 
 
