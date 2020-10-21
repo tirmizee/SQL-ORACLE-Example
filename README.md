@@ -199,6 +199,12 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### MINUS
 
+### TO_CHAR
+
+#### TO_CHAR syntax
+
+#### TO_CHAR with simple
+
 ### UNION & UNION ALL
 
 ### SEQUENCE 
