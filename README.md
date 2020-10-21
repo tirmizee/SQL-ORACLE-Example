@@ -201,8 +201,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### TO_CHAR
 
-- <b>NLS_CALENDAR</b>
-- <b>NLS_DATE_LANGUAGE</b>
+- <b>NLS_CALENDAR</b> indicates the calendar system used for the language
+- <b>NLS_DATE_LANGUAGE</b> specifies the language for days, months
 
 #### TO_CHAR syntax
 
