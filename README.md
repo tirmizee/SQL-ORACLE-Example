@@ -262,6 +262,13 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
     TO_NUMBER(string1, [format_mask], [nls_language])
 
+#### TO_NUMBER with simple
+
+    SELECT 
+        TO_NUMBER('1210.73', '9999.99'),
+        TO_NUMBER('546', '9999.99')
+    FROM DUAL;
+
 ### CAST 
 
 ### UNION & UNION ALL
