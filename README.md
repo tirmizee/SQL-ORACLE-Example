@@ -290,8 +290,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 ### MAX & MIN
 
     SELECT 
-        MAX(salary),
-        MIN(NVL(salary,0))
+        MAX(salary),       -- 49867.14
+        MIN(NVL(salary,0)) -- 0
     FROM salary;
 
 ### SUM
