@@ -235,9 +235,11 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### CONCAT 
 
+#### CONCAT syntax
+
     CONCAT(string1,string2)
     
-#### Using CONCAT
+#### CONCAT with simple
 
     SELECT CONCAT('Hello','World') FROM DUAL;                --HelloWorld
     SELECT CONCAT('Hello',CONCAT('World','2020')) FROM DUAL; --HelloWorld2020
