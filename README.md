@@ -275,18 +275,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### SEQUENCE 
 
-### COUNT
-
-#### COUNT with simple
-
-    SELECT COUNT(*) FROM employee;
-
-    SELECT
-        (SELECT COUNT(*) FROM employee) AS count_of_employee,
-        (SELECT COUNT(*) FROM users)    AS count_of_users,
-        (SELECT COUNT(*) FROM profile)  AS count_of_profile
-    FROM DUAL;
-
 ### MIN & MAX
 
     CREATE TABLE emp (
@@ -394,6 +382,28 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         sal,
         SUM(sal) OVER (PARTITION BY deptno) AS total_sal_by_dept
     FROM emp_salary;
+    
+    SELECT 
+        empno,
+        ename,
+        deptno,
+        sal,
+        SUM(sal) OVER (PARTITION BY deptno ORDER BY sal) AS total_sal_by_dept
+    FROM emp_salary;
+
+### AVG
+
+### COUNT
+
+#### COUNT with simple
+
+    SELECT COUNT(*) FROM employee;
+
+    SELECT
+        (SELECT COUNT(*) FROM employee) AS count_of_employee,
+        (SELECT COUNT(*) FROM users)    AS count_of_users,
+        (SELECT COUNT(*) FROM profile)  AS count_of_profile
+    FROM DUAL;
 
 ### EXTRACT
 
