@@ -231,6 +231,12 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         TO_CHAR(12345.67, '99999.9')
     FROM DUAL;
 
+### TO_DATE
+
+### TO_NUMBER 
+
+### CAST 
+
 ### UNION & UNION ALL
 
 ### SEQUENCE 
