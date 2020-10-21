@@ -287,18 +287,19 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         (SELECT COUNT(*) FROM profile)  AS count_of_profile
     FROM DUAL;
 
-### MAX & MIN
+### MAX
+
+### MIN
 
 #### MIN syntax
 
     MIN([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
 
-#### MAX & MIN with simple
+#### MIN with simple
 
-    SELECT 
-        MAX(salary),       -- 49867.14
-        MIN(NVL(salary,0)) -- 0
-    FROM salary;
+    SELECT  MIN(salary) FROM salary;
+    SELECT  MIN(NVL(salary,0)) FROM salary;
+    SELECT  MIN(DISTINCT NVL(salary,0)) FROM salary;
 
 ### SUM
 
