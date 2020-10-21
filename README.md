@@ -499,3 +499,7 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
     SELECT 'Hello' || 'World' FROM DUAL;                     --HelloWorld
     SELECT 'Hello' || 'World' || '2020' FROM DUAL;           --HelloWorld2020
+    
+### Reference
+
+- https://oracle-base.com/articles/12c/row-limiting-clause-for-top-n-queries-12cr1
