@@ -369,6 +369,32 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### SUM
 
+
+#### SUM with simple
+
+    SELECT 
+        SUM(sal)
+    FROM emp_salary;
+
+#### SUM with GROUP BY
+
+    SELECT 
+        deptno,
+        SUM(sal)
+    FROM emp_salary
+    GROUP BY deptno
+    ORDER BY deptno;
+
+#### SUM with OVER PARTITION BY
+
+    SELECT 
+        empno,
+        ename,
+        deptno,
+        sal,
+        SUM(sal) OVER (PARTITION BY deptno) AS total_sal_by_dept
+    FROM emp_salary;
+
 ### EXTRACT
 
 ### TRUNCATE 
