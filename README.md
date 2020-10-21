@@ -164,6 +164,10 @@
 
 COALESCE function aims to return a non-NULL value
 
+#### COALESCE syntax
+
+    COALESCE ( expr1, expr2, [expr…])
+
 ### SUBSTR 
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
