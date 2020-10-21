@@ -448,6 +448,16 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     GROUP BY deptno
     ORDER BY deptno;
 
+#### COUNT with OVER PARTITION BY
+
+    SELECT
+        empno,
+        ename,
+        deptno,
+        sal,
+        COUNT(*) OVER (PARTITION BY deptno) AS amount_by_dept
+    FROM emp_salary;
+
 ### EXTRACT
 
 ### TRUNCATE 
