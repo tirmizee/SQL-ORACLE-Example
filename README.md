@@ -479,6 +479,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### EXTRACT
 
+### WITH 
+
 ### TRUNCATE 
 
     TRUNCATE TABLE schema_name.table_name
