@@ -215,7 +215,9 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         TO_CHAR(sysdate, 'dd/mm/yyyy HH12'),
         TO_CHAR(sysdate, 'dd/mm/yyyy HH24'),
         TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI'),
-        TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI:SS')
+        TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI:SS'),
+        TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI:SS', 'NLS_CALENDAR=''THAI BUDDHA'''),
+        TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI:SS', 'NLS_CALENDAR=''THAI BUDDHA'' NLS_DATE_LANGUAGE=THAI')
     FROM DUAL;
 
     SELECT 
