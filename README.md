@@ -45,6 +45,8 @@
     FROM users u
     INNER JOIN profile p ON u.profile_id = p.profile_id; 
 
+### DUAL
+
 ### CASE 
 
     SELECT 
