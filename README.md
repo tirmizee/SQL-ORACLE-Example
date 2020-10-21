@@ -98,6 +98,10 @@
     [[ PRESERVE | PURGE] MATERIALIZED VIEW LOG ]]
     [[ DROP | REUSE]] STORAGE ]
 
+#### Using TRUNCATE
+
+    TRUNCATE TABLE employees_demo; 
+
 #### Using SUBSTR
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
