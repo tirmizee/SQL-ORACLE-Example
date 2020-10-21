@@ -240,6 +240,10 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### TO_DATE
 
+#### TO_DATE syntax
+
+    TO_DATE( string1 , [format_mask] , [nls_language] )
+
 ### TO_NUMBER 
 
 ### CAST 
