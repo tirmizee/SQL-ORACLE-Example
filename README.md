@@ -108,7 +108,7 @@
 
 #### Using TRUNCATE
 
-    TRUNCATE TABLE employees_demo; 
+    TRUNCATE TABLE temp_employee;
 
 
 ### CONCAT 
