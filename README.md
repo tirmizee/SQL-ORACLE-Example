@@ -337,6 +337,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     GROUP BY deptno
     ORDER BY deptno;
 
+#### MIN with OVER PARTITION BY
+
+    SELECT 
+        empno,     
+        ename,
+        deptno,
+        sal,
+        MIN(sal) OVER (PARTITION BY deptno) AS min_sal
+    FROM emp_salary
+    ORDER BY deptno;
+
 ### SUM
 
 ### EXTRACT
