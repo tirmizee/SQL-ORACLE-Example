@@ -94,6 +94,13 @@
 
 ### LPAD & RPAD 
 
+#### LPAD syntax
+
+    LPAD( string1, padded_length , [pad_string] )
+
+#### LPAD with simple
+
+
 ### NVL 
 
 ### NVL2 
