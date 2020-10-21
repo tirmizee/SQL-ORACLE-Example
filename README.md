@@ -289,6 +289,11 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### MAX & MIN
 
+    SELECT 
+        MAX(salary),
+        MIN(NVL(salary,0))
+    FROM salary;
+
 ### SUM
 
 ### EXTRACT
