@@ -118,6 +118,10 @@
 
 ### COUNT
 
+#### Using COUNT
+
+    SELECT COUNT(*) FROM employee;
+
 ### MAX & MIN
 
 ### SUM
