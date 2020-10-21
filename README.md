@@ -437,6 +437,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         COUNT(comm) AS count_comm
     FROM emp_salary;
 
+#### COUNT field with GROUP BY
+
+    SELECT
+        deptno,
+        COUNT(*) AS count_total,
+        COUNT(sal) AS count_sal,
+        COUNT(comm) AS count_comm
+    FROM emp_salary
+    GROUP BY deptno
+    ORDER BY deptno;
+
 ### EXTRACT
 
 ### TRUNCATE 
