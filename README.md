@@ -252,7 +252,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         TO_DATE('2003/07/09', 'yyyy/mm/dd'),
         TO_DATE('2012-06-05', 'YYYY-MM-DD'),
         TO_DATE('2015/05/15 8:30:25', 'YYYY/MM/DD HH:MI:SS'),
-        TO_DATE('21-10-2563', 'dd-mm-yyyy','NLS_CALENDAR=''THAI BUDDHA''')
+        TO_DATE('21-10-2563', 'dd-mm-yyyy','NLS_CALENDAR=''THAI BUDDHA'''),
+        TO_DATE('21-10-2563', 'dd-mm-yyyy','NLS_DATE_LANGUAGE = THAI')
     FROM DUAL;
 
 ### TO_NUMBER 
@@ -265,7 +266,7 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### COUNT
 
-#### Using COUNT
+#### COUNT with simple
 
     SELECT COUNT(*) FROM employee;
 
