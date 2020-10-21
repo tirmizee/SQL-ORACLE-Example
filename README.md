@@ -106,6 +106,14 @@
         LPAD('999',7,'0')  -- 0000999
     FROM dual;
 
+#### RPAD with simple
+
+    SELECT
+        RPAD('999',3),     -- 999
+        RPAD('999',7),     -- 999
+        RPAD('999',7,'0')  -- 9990000
+    FROM dual;
+
 ### NVL 
 
 ### NVL2 
