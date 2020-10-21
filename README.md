@@ -30,7 +30,9 @@
             ELSE 'PROGRAMMER'
         END AS POSITION
     FROM employee ORDER BY emp_code;
-    
+
+### INSERT
+
 ### CASE 
 
     SELECT 
