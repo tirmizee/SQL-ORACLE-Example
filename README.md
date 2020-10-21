@@ -185,6 +185,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     SELECT SUBSTR('Pratya Yeekhaday', 1, 6) FROM DUAL; --Pratya
     SELECT SUBSTR('Pratya Yeekhaday', 3, 9) FROM DUAL; --atya Yeek
 
+### UPPER & LOWER
+
 ### SELECT
 
     SELECT
