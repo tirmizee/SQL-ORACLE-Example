@@ -258,6 +258,10 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### TO_NUMBER 
 
+#### TO_NUMBER syntax
+
+    TO_NUMBER(string1, [format_mask], [nls_language])
+
 ### CAST 
 
 ### UNION & UNION ALL
@@ -292,7 +296,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 #### Using TRUNCATE
 
     TRUNCATE TABLE temp_employee;
-
 
 ### CONCAT 
 
