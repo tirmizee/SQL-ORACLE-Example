@@ -1,6 +1,5 @@
 # SQL-ORACLE-Example
 
-
 ### CREATE TABLE
 
 #### Create table from copy another table
@@ -21,7 +20,6 @@
         manager_id      
     FROM EMPLOYEE WHERE 1=2; 
     
-
 ### INSERT
 
 #### Using INSERT with VALUES
@@ -461,6 +459,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         sal,
         COUNT(*) OVER (PARTITION BY deptno) AS amount_by_dept
     FROM emp_salary;
+
+#### COUNT with Subquery
 
 ### LISTAGG 
 
