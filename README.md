@@ -428,6 +428,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         (SELECT COUNT(*) FROM users)    AS count_of_users,
         (SELECT COUNT(*) FROM profile)  AS count_of_profile
     FROM DUAL;
+    
+#### COUNT field 
+
+    SELECT 
+        COUNT(*) AS count_total,
+        COUNT(sal) AS count_sal,
+        COUNT(comm) AS count_comm
+    FROM emp_salary;
 
 ### EXTRACT
 
