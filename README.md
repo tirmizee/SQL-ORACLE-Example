@@ -162,6 +162,8 @@
 
 ### COALESCE 
 
+COALESCE function aims to return a non-NULL value
+
 ### SUBSTR 
 
     SELECT SUBSTR('Pratya Yeekhaday', 1, 1) FROM DUAL; --P
