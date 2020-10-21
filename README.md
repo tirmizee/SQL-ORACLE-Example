@@ -215,6 +215,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI'),
         TO_CHAR(sysdate, 'dd/mm/yyyy HH:MI:SS')
     FROM DUAL;
+    
+    SELECT TO_CHAR(12345, '00000000') FROM DUAL; -- 00012345
 
 ### UNION & UNION ALL
 
