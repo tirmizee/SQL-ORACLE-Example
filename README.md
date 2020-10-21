@@ -146,6 +146,20 @@
 
 ### NVL2 
 
+#### NVL2 syntax
+
+    NVL2( string1, value_if_not_null, value_if_null )
+
+#### NVL2 with simple
+
+    SELECT
+        NVL2(salary,1000,0) AS total
+    FROM salary;
+
+    SELECT
+        NVL2(emp_code,'NOT NULL','IS NULL') AS CODE
+    FROM salary
+
 ### COALESCE 
 
 ### SUBSTR 
