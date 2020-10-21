@@ -33,6 +33,10 @@
 
 ### INSERT
 
+#### Using INSERT with SELECT
+
+    INSERT INTO temp_employee  SELECT * FROM employee; 
+
 ### CASE 
 
     SELECT 
