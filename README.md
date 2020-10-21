@@ -201,6 +201,9 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### TO_CHAR
 
+- <b>NLS_CALENDAR</b>
+- <b>NLS_DATE_LANGUAGE</b>
+
 #### TO_CHAR syntax
 
     TO_CHAR( input_value, [format_mask], [nls_parameter] )
