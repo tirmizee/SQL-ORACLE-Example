@@ -37,6 +37,19 @@
 
     INSERT INTO temp_employee  SELECT * FROM employee; 
 
+    INSERT INTO temp_employee(
+        emp_id,
+        emp_code,
+        emp_first_name,
+        emp_last_name
+    )  SELECT 
+        ROWNUM,
+        u.username,
+        p.first_name,
+        p.last_name
+    FROM users u
+    INNER JOIN profile p ON u.profile_id = p.profile_id; 
+
 ### CASE 
 
     SELECT 
