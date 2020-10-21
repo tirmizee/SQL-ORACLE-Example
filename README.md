@@ -116,6 +116,10 @@
 
 ### MAX & MIN
 
+### SUM
+
+### EXTRACT
+
 ### TRUNCATE 
 
     TRUNCATE TABLE schema_name.table_name
