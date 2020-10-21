@@ -100,6 +100,11 @@
 
 #### LPAD with simple
 
+    SELECT
+        LPAD('999',3),     -- 999
+        LPAD('999',7),     --     999
+        LPAD('999',7,'0')  -- 0000999
+    FROM dual;
 
 ### NVL 
 
