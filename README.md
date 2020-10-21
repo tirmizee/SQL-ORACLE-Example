@@ -35,6 +35,8 @@
 
 #### Using INSERT with VALUES
 
+    INSERT INTO temp_employee(EMP_ID, EMP_CODE, EMP_FIRST_NAME, EMP_LAST_NAME) values(1,'EMP001','Pratya','Yeekhaday')
+
 #### Using INSERT with SELECT
 
     INSERT INTO temp_employee  SELECT * FROM employee; 
