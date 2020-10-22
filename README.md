@@ -498,6 +498,45 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### WITH 
 
+    SELECT 
+        e.employee_name, 
+        d.department_name
+    FROM employees e
+    JOIN departments d ON d.department_id = e.department_id
+    ORDER BY e.employee_name;
+
+    SELECT 
+        e.employee_name, 
+        d.department_name
+    FROM employees e, departments d
+    WHERE d.department_id = e.department_id
+    ORDER BY e.employee_name;
+
+    SELECT 
+        ed.employee_name, 
+        ed.department_name
+    FROM (
+        SELECT 
+            e.employee_name, 
+            d.department_name
+        FROM employees e, departments d
+        WHERE d.department_id = e.department_id
+    ) ed
+    ORDER BY ed.employee_name;
+
+    WITH emp_dept_join AS (
+        SELECT 
+            e.employee_name, 
+            d.department_name
+        FROM employees e, departments d
+        WHERE d.department_id = e.department_id
+    )
+    SELECT 
+        ed.employee_name, 
+        ed.department_name
+    FROM emp_dept_join ed
+    ORDER BY ed.employee_name;
+
 ### TRUNCATE 
 
     TRUNCATE TABLE schema_name.table_name
