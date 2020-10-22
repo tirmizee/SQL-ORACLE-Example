@@ -462,6 +462,12 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### COUNT with Subquery
 
+    select 
+        d.department_id,
+        d.department_name,
+        (select count(*) from employees e WHERE e.department_id = d.department_id) as count_employee
+    from departments d;
+
 ### LISTAGG 
 
 #### LISTAGG with simple
