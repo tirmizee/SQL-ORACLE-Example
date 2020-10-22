@@ -467,6 +467,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         d.department_name,
         (select count(*) from employees e WHERE e.department_id = d.department_id) as count_employee
     from departments d;
+    -- same as below
+    SELECT
+        d.department_id,
+        d.department_name,
+        count(e.employee_id) as count_employee
+    from departments d
+    LEFT join employees e on e.department_id = d.department_id
+    GROUP BY 
+        d.department_id,
+        d.department_name
+    ORDER BY d.department_id
 
 ### LISTAGG 
 
