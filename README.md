@@ -535,14 +535,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM   dual
     CONNECT BY level <= 10;
 
-### Rownum with simple
+#### Rownum with simple
 
     SELECT 
         val
     FROM rownum_order_test
     WHERE rownum <= 5
 
-### Rownum with ORDER BY
+#### Rownum with ORDER BY
 
     SELECT
         val
@@ -552,6 +552,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         FROM rownum_order_test
         ORDER BY val
     ) WHERE rownum <= 5
+
+#### Rownum with paging
 
 ### CONCAT 
 
