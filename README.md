@@ -518,9 +518,11 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     [[ PRESERVE | PURGE] MATERIALIZED VIEW LOG ]]
     [[ DROP | REUSE]] STORAGE ]
 
-#### Using TRUNCATE
+#### TRUNCATE with simple 
 
     TRUNCATE TABLE temp_employee;
+
+### Top-N Queries
 
 ### CONCAT 
 
