@@ -600,5 +600,4 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     
 ### Reference
 
-- https://oracle-base.com/articles/12c/row-limiting-clause-for-top-n-queries-12cr1
-- https://oracle-base.com/articles/misc/sql-for-beginners-the-select-list
+- https://oracle-base.com/articles/sql/articles-sql#getting-started
