@@ -282,7 +282,21 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### CAST 
 
+### IN & NOT IN
+
+#### IN & NOT IN syntax
+
+    WHERE expression IN (Value 1, Value 2,…Value N)
+
+    WHERE expression NOT IN (Value 1, Value 2,…Value N)
+
 ### EXISTS & NOT EXISTS
+
+#### EXISTS & NOT EXISTS syntax
+
+    WHERE EXISTS (sub-query)
+
+    WHERE NOT EXISTS (sub-query)
 
 ### UNION & UNION ALL
 
