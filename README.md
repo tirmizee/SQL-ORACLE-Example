@@ -284,7 +284,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### IN & NOT IN
 
-#### IN & NOT IN syntax
 
     WHERE expression IN (Value 1, Value 2,…Value N)
 
@@ -292,19 +291,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### EXISTS & NOT EXISTS
 
-#### EXISTS & NOT EXISTS syntax
-
     WHERE EXISTS (sub-query)
 
     WHERE NOT EXISTS (sub-query)
+
+### LIKE & NOT LIKE
 
 ### UNION & UNION ALL
 
 ### SEQUENCE 
 
 ### MIN & MAX
-   
-#### MIN & MAX syntax
 
     MIN([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
     MAX([ DISTINCT | ALL ] expr) [ OVER (analytic_clause) ]
