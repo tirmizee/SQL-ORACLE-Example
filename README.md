@@ -282,12 +282,13 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### CAST 
 
+### EXISTS & NOT EXISTS
+
 ### UNION & UNION ALL
 
 ### SEQUENCE 
 
 ### MIN & MAX
-
    
 #### MIN & MAX syntax
 
