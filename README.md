@@ -524,6 +524,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### Top-N Queries
 
+    CREATE TABLE rownum_order_test (
+      val  NUMBER
+    );
+
+    INSERT ALL
+      INTO rownum_order_test
+      INTO rownum_order_test
+    SELECT level
+    FROM   dual
+    CONNECT BY level <= 10;
+
 ### CONCAT 
 
 #### CONCAT syntax
