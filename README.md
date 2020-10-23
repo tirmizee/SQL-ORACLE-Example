@@ -555,6 +555,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### Rownum with paging
 
+    SELECT  username FROM (
+        SELECT username, rownum AS rnum FROM (
+            SELECT username
+            FROM users
+            ORDER BY username
+        ) WHERE rownum < :v_start + :v_limit)
+    WHERE rnum >= :v_start;
+
 ### CONCAT 
 
 #### CONCAT syntax
