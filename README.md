@@ -542,6 +542,17 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM rownum_order_test
     WHERE rownum <= 5
 
+### Rownum with ORDER BY
+
+    SELECT
+        val
+    FROM (
+        SELECT 
+            val
+        FROM rownum_order_test
+        ORDER BY val
+    ) WHERE rownum <= 5
+
 ### CONCAT 
 
 #### CONCAT syntax
