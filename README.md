@@ -43,6 +43,15 @@
     FROM users u
     INNER JOIN profile p ON u.profile_id = p.profile_id; 
 
+### Conditions
+
+ - <b>=</b> : Equal.
+ - <b><> or !=</b> : Not equal.
+ - <b>></b> : Greater than.
+ - <b><</b> : Less than.
+ - <b>>=</b> : Great than or equal.
+ - <b><=</b> : Less than or equal.
+
 ### DUAL
 
 ### CASE 
