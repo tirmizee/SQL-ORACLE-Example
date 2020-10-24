@@ -286,8 +286,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     ORDER BY e.commission ASC NULLS FIRST;
 
 
-### MINUS
-
 ### TO_CHAR
 
 - <b>NLS_CALENDAR</b> indicates the calendar system used for the language
@@ -419,6 +417,24 @@ The INTERSECT set operator returns all distinct rows selected by both queries. T
         department_name
     FROM departments
     WHERE department_id >= 20
+
+### MINUS
+
+The MINUS set operator returns all distinct rows selected by the first query but not the second. This is functionally equivalent to the ANSI set operator EXCEPT DISTINCT.
+
+#### MINUS with simple
+
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    WHERE department_id <= 30
+    MINUS
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    WHERE department_id >= 20;
 
 ### SEQUENCE 
 
