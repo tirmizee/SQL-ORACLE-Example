@@ -234,6 +234,7 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### ORDER BY with simple
 
+    - Default order is ascending
     SELECT 
         * 
     FROM EMPLOYEES
