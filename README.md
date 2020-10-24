@@ -250,6 +250,25 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM EMPLOYEES
     ORDER BY EMPLOYEE_NAME DESC;
 
+#### ORDER BY with multiple column
+
+    select 
+        * 
+    from employees
+    order by employee_name, jobb;
+
+#### ORDER BY with different order
+
+    SELECT 
+        e.salary, 
+        e.commission, 
+        e.employee_name
+    FROM employees e
+    WHERE department_id = 30
+    ORDER BY 
+        e.salary ASC, 
+        e.commission DESC;
+
 #### ORDER BY with handling NULLs
 
 ### INTERSECT 
