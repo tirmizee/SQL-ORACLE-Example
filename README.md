@@ -762,6 +762,10 @@ The MINUS set operator returns all distinct rows selected by the first query but
 
 ### WITH 
 
+An alternative to an inline view is to move the subquery out to the WITH clause. We can then reference this named query in the FROM clause of the main SELECT statement. This can be used to make a very complicated FROM clause look much simpler.
+
+#### WITH with simple
+
     SELECT 
         e.employee_name, 
         d.department_name
