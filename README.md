@@ -227,6 +227,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         password  psd
     FROM users;
 
+### ORDER BY
+
+- <b>ASC</b> : Ascending 
+- <b>DESC</b> : Descending 
+
+#### ORDER BY with simple
+
+#### ORDER BY with handling NULLs
+
 ### INTERSECT 
 
 ### MINUS
@@ -303,7 +312,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 ### CAST 
 
 ### IN & NOT IN
-
 
     WHERE expression IN (Value 1, Value 2,…Value N)
 
