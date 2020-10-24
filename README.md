@@ -216,6 +216,11 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### UPPER & LOWER
 
+    SELECT 
+        UPPER('Pratya Yeekhaday'), -- PRATYA YEEKHADAY
+        LOWER('Pratya Yeekhaday')  -- pratya yeekhaday
+    FROM DUAL;
+
 ### SELECT
 
 #### SELECT with simple
