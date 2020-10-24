@@ -43,6 +43,11 @@
     FROM users u
     INNER JOIN profile p ON u.profile_id = p.profile_id; 
 
+#### INSERT with Subqueries
+
+    INSERT INTO employees2 (employee_id, employee_name, job, hiredate, salary)
+    VALUES (8888, 'JONES','CLERK',to_date('17-12-1980','dd-mm-yyyy'),(SELECT MAX(salary)+1000 FROM employees));
+
 ### Operator
 
  - <b>=</b> : Equal.
