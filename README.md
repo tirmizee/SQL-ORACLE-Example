@@ -43,7 +43,7 @@
     FROM users u
     INNER JOIN profile p ON u.profile_id = p.profile_id; 
 
-### Conditions
+### Operator
 
  - <b>=</b> : Equal.
  - <b><> or !=</b> : Not equal.
@@ -52,10 +52,23 @@
  - <b>>=</b> : Great than or equal.
  - <b><=</b> : Less than or equal.
 
+### Column Alias
+
+    SELECT 
+        username AS usr,
+        password AS psd
+    FROM users;
+
+    SELECT 
+        username  usr,
+        password  psd
+    FROM users;
+    
 ### DUAL
 
 ### CASE 
-
+    
+    -- Switch
     SELECT 
         emp_code,
         emp_first_name,
@@ -69,6 +82,7 @@
         END AS POSITION
     FROM employee ORDER BY emp_code;
     /
+     -- If
     SELECT 
         emp_code,
         CASE 
