@@ -373,6 +373,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### CAST 
 
+### CONNECT BY
+
 ### IN & NOT IN
 
     WHERE expression IN (Value 1, Value 2,…Value N)
