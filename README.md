@@ -648,6 +648,12 @@ The MINUS set operator returns all distinct rows selected by the first query but
 
 ### EXTRACT
 
+    SELECT
+        EXTRACT( YEAR FROM sysdate) YEAR,
+        EXTRACT( MONTH FROM sysdate) MONTH,
+        EXTRACT( DAY FROM sysdate) DAY
+    FROM DUAL;
+
 ### WITH 
 
     SELECT 
