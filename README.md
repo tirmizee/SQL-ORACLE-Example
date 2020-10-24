@@ -52,17 +52,7 @@
  - <b>>=</b> : Great than or equal.
  - <b><=</b> : Less than or equal.
 
-### Column Alias
 
-    SELECT 
-        username AS usr,
-        password AS psd
-    FROM users;
-
-    SELECT 
-        username  usr,
-        password  psd
-    FROM users;
     
 ### DUAL
 
@@ -212,6 +202,10 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### SELECT
 
+#### SELECT with simple
+
+#### SELECT with CASE
+
     SELECT
         CASE value
             WHEN '1' THEN (SELECT COUNT(*) FROM employee)
@@ -220,6 +214,18 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
             ELSE (SELECT COUNT(*) FROM employee)
         END AS COUNT
     FROM app_setting;
+
+#### SELECT with Column Alias
+
+    SELECT 
+        username AS usr,
+        password AS psd
+    FROM users;
+
+    SELECT 
+        username  usr,
+        password  psd
+    FROM users;
 
 ### INTERSECT 
 
