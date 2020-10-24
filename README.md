@@ -61,6 +61,17 @@
     
 ### DUAL
 
+The DUAL table has one column named DUMMY whose data type is VARCHAR2() and contains one row with a value X.
+
+#### DUAL with simple
+
+    SELECT * FROM dual;
+
+    SELECT 
+        999,
+        'Hello world'
+    FROM DUAL;
+
 ### CASE 
     
     -- Switch
