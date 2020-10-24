@@ -270,6 +270,16 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         AVG(e.salary) AS avg_salary,
         SUM(e.salary) AS sum_salary
     FROM employees e
+    GROUP BY e.department_id;
+
+#### GROUP BY with ORDER BY
+
+    SELECT 
+        e.department_id,
+        COUNT(*) AS employee_count,
+        AVG(e.salary) AS avg_salary,
+        SUM(e.salary) AS sum_salary
+    FROM employees e
     GROUP BY e.department_id
     ORDER BY e.department_id;
 
