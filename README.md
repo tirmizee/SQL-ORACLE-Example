@@ -234,6 +234,21 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### ORDER BY with simple
 
+    SELECT 
+        * 
+    FROM EMPLOYEES
+    ORDER BY EMPLOYEE_NAME;
+
+    SELECT 
+        * 
+    FROM EMPLOYEES
+    ORDER BY EMPLOYEE_NAME ASC;
+
+    SELECT 
+        * 
+    FROM EMPLOYEES
+    ORDER BY EMPLOYEE_NAME DESC;
+
 #### ORDER BY with handling NULLs
 
 ### INTERSECT 
