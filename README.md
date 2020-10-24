@@ -285,23 +285,6 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     WHERE department_id = 30
     ORDER BY e.commission ASC NULLS FIRST;
 
-### INTERSECT 
-
-The INTERSECT set operator returns all distinct rows selected by both queries. That means only those rows common to both queries will be present in the final result set.
-
-#### INTERSECT with simple
-
-    SELECT 
-        department_id, 
-        department_name
-    FROM departments
-    WHERE department_id <= 30
-    INTERSECT
-    SELECT 
-        department_id, 
-        department_name
-    FROM departments
-    WHERE department_id >= 20
 
 ### MINUS
 
@@ -418,6 +401,24 @@ The INTERSECT set operator returns all distinct rows selected by both queries. T
         department_id, 
         department_name
     FROM departments
+
+### INTERSECT 
+
+The INTERSECT set operator returns all distinct rows selected by both queries. That means only those rows common to both queries will be present in the final result set.
+
+#### INTERSECT with simple
+
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    WHERE department_id <= 30
+    INTERSECT
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    WHERE department_id >= 20
 
 ### SEQUENCE 
 
