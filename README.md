@@ -807,6 +807,21 @@ An alternative to an inline view is to move the subquery out to the WITH clause.
 
 #### WITH with multiple
 
+### TRUNC
+
+The TRUNC (date) function is used to get the date with the time portion of the day truncated to a specific unit of measure. 
+
+    TRUNC(date , [fmt])
+
+#### TRUNC with simple
+
+    SELECT 
+        TRUNC(TO_DATE('02-MAR-15 15:35:32', 'DD-MON-YY HH24:MI:SS')),
+        TRUNC(TO_DATE('02-MAR-15 15:35:32', 'DD-MON-YY HH24:MI:SS'), 'DD') ,
+        TRUNC(TO_DATE('02-MAR-15 15:35:32', 'DD-MON-YY HH24:MI:SS'), 'MM') ,
+        TRUNC(TO_DATE('02-MAR-15 15:35:32', 'DD-MON-YY HH24:MI:SS'), 'YEAR') 
+    FROM DUAL;
+
 ### TRUNCATE 
 
     TRUNCATE TABLE schema_name.table_name
