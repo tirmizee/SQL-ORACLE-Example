@@ -374,7 +374,7 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 ### UNION & UNION ALL
 
 - <b>UNION</b> : The UNION set operator returns all distinct rows selected by either query. That means any duplicate rows will be removed.
-- <b>UNION ALL</b> :
+- <b>UNION ALL</b> : The UNION ALL set operator returns all rows selected by either query. That means any duplicates will remain in the final result set.
 
 ### UNION with simple
 
