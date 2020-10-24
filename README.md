@@ -271,6 +271,20 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### ORDER BY with handling NULLs
 
+    SELECT 
+        e.commission, 
+        e.employee_name
+    FROM employees e
+    WHERE department_id = 30
+    ORDER BY e.commission ASC;
+    /
+    SELECT 
+        e.commission, 
+        e.employee_name
+    FROM employees e
+    WHERE department_id = 30
+    ORDER BY e.commission ASC NULLS FIRST;
+
 ### INTERSECT 
 
 ### MINUS
