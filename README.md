@@ -805,6 +805,8 @@ An alternative to an inline view is to move the subquery out to the WITH clause.
     FROM emp_dept_join ed
     ORDER BY ed.employee_name;
 
+#### WITH with multiple
+
 ### TRUNCATE 
 
     TRUNCATE TABLE schema_name.table_name
