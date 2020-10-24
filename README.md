@@ -57,8 +57,6 @@
  - <b>>=</b> : Great than or equal.
  - <b><=</b> : Less than or equal.
 
-
-    
 ### DUAL
 
 The DUAL table has one column named DUMMY whose data type is VARCHAR2() and contains one row with a value X.
@@ -317,6 +315,30 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     LEFT OUTER JOIN employees e ON d.department_id = e.department_id
     GROUP BY d.department_name;
 
+#### GROUP BY with HAVING
+
+    SELECT 
+        d.department_name, 
+        e.job,
+        COUNT(e.employee_id) AS employee_count,
+        AVG(NVL(e.salary, 0)) AS avg_salary,
+        SUM(NVL(e.salary, 0)) AS sum_salary
+    FROM departments d
+    LEFT OUTER JOIN employees e ON d.department_id = e.department_id
+    GROUP BY d.department_name, e.job
+    ORDER BY d.department_name, e.job;
+
+    SELECT 
+        d.department_name, 
+        e.job,
+        COUNT(e.employee_id) AS employee_count,
+        AVG(NVL(e.salary, 0)) AS avg_salary,
+        SUM(NVL(e.salary, 0)) AS sum_salary
+    FROM departments d
+    LEFT OUTER JOIN employees e ON d.department_id = e.department_id
+    GROUP BY d.department_name, e.job
+    HAVING COUNT(e.employee_id) > 1
+    ORDER BY d.department_name, e.job;
 
 ### ORDER BY
 
