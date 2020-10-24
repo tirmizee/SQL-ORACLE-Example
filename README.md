@@ -248,6 +248,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         password  psd
     FROM users;
 
+### GROUP BY
+
+    SELECT
+        column_list
+    FROM
+        T
+    GROUP BY c1,c2,c3;
+
 ### ORDER BY
 
 - <b>ASC</b> : Ascending 
@@ -549,13 +557,13 @@ The MINUS set operator returns all distinct rows selected by the first query but
 
 ### AVG
 
-### AVG with simple
+#### AVG with simple
 
     SELECT 
         AVG(sal) AS mean_sal
     FROM emp_salary;
 
-### AVG with GROUP BY
+#### AVG with GROUP BY
 
     SELECT 
         deptno,
@@ -564,7 +572,7 @@ The MINUS set operator returns all distinct rows selected by the first query but
     GROUP BY deptno
     ORDER BY deptno;
 
-### AVG with OVER PARTITION BY
+#### AVG with OVER PARTITION BY
 
     SELECT
         empno,
@@ -762,8 +770,6 @@ The MINUS set operator returns all distinct rows selected by the first query but
     WHERE rnum >= :v_start;
 
 ### CONCAT 
-
-#### CONCAT syntax
 
     CONCAT(string1,string2)
     
