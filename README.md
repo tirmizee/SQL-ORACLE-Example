@@ -256,6 +256,23 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         T
     GROUP BY c1,c2,c3;
 
+#### GROUP BY with simple 
+
+    SELECT 
+        COUNT(*) AS employee_count,
+        AVG(e.salary) AS avg_salary,
+        SUM(e.salary) AS sum_salary
+    FROM employees e;
+
+    SELECT 
+        e.department_id,
+        COUNT(*) AS employee_count,
+        AVG(e.salary) AS avg_salary,
+        SUM(e.salary) AS sum_salary
+    FROM employees e
+    GROUP BY e.department_id
+    ORDER BY e.department_id;
+
 ### ORDER BY
 
 - <b>ASC</b> : Ascending 
