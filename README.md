@@ -272,6 +272,19 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM employees e
     GROUP BY e.department_id;
 
+#### GROUP BY with multiple column
+
+    SELECT 
+        e.department_id,
+        e.job,
+        COUNT(*) AS employee_count,
+        AVG(e.salary) AS avg_salary,
+        SUM(e.salary) AS sum_salary
+    FROM employees e
+    GROUP BY 
+        e.department_id,
+        e.job;
+
 #### GROUP BY with ORDER BY
 
     SELECT 
