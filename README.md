@@ -296,6 +296,28 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     GROUP BY e.department_id
     ORDER BY e.department_id;
 
+#### GROUP BY with JOIN
+
+    -- INNER JOIN
+    SELECT 
+        d.department_name,
+        COUNT(*) AS employee_count,
+        AVG(e.salary) AS avg_salary,
+        SUM(e.salary) AS sum_salary
+    FROM departments d
+    JOIN employees e ON d.department_id = e.department_id
+    GROUP BY d.department_name;
+    -- LEFT JOIN
+    SELECT 
+        d.department_name,
+        COUNT(e.employee_id)  AS employee_count,
+        AVG(NVL(e.salary, 0)) AS avg_salary,
+        SUM(NVL(e.salary, 0)) AS sum_salary
+    FROM departments d
+    LEFT OUTER JOIN employees e ON d.department_id = e.department_id
+    GROUP BY d.department_name;
+
+
 ### ORDER BY
 
 - <b>ASC</b> : Ascending 
