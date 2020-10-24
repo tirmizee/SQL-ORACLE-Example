@@ -476,6 +476,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### LISTAGG 
 
+    LISTAGG (measure_column , ['delimiter']) WITHIN GROUP (order_by_clause) [OVER (query_partition_clause)]
+
 #### LISTAGG with simple
 
     SELECT 
