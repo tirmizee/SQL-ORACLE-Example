@@ -379,6 +379,30 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 - <b>UNION</b> : The UNION set operator returns all distinct rows selected by either query. That means any duplicate rows will be removed.
 - <b>UNION ALL</b> :
 
+### UNION with simple
+
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    UNION
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+
+### UNION ALL with simple
+
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+    UNION ALL
+    SELECT 
+        department_id, 
+        department_name
+    FROM departments
+
 ### SEQUENCE 
 
 ### MIN & MAX
