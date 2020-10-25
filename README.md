@@ -587,6 +587,26 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 - <b>%</b> : Allows you to match any string of any length (including zero length)
 - <b>_</b> : Allows you to match on a single character
 
+#### LIKE with simple
+
+    SELECT 
+        *
+    FROM employees
+    WHERE employee_name LIKE 'M%'
+    ORDER BY employee_name;
+
+    SELECT 
+        *
+    FROM employees
+    WHERE employee_name LIKE '%LA%'
+    ORDER BY employee_name;
+
+    SELECT 
+        *
+    FROM employees
+    WHERE employee_name LIKE '__A%'
+    ORDER BY employee_name;
+
 ### UNION & UNION ALL
 
 - <b>UNION</b> : The UNION set operator returns all distinct rows selected by either query. That means any duplicate rows will be removed.
