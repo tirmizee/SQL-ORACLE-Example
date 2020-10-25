@@ -477,6 +477,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### BETWEEN & NOT BETWEEN
 
+ - <b>BETWEEN</b> : The Oracle BETWEEN condition is used to retrieve values within a range
+ - <b>NOT BETWEEN</b> :
+
+#### BETWEEN & NOT BETWEEN syntax
+
+    expression BETWEEN value1 AND value2;
+    expression NOT BETWEEN value1 AND value2;
+
 #### BETWEEN with simple
 
     SELECT 
