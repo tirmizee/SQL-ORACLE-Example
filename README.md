@@ -472,6 +472,8 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### CONNECT BY
 
+### BETWEEN & NOT BETWEEN
+
 ### IN & NOT IN
 
     WHERE expression IN (Value 1, Value 2,…Value N)
