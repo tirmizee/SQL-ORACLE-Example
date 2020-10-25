@@ -477,6 +477,22 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### BETWEEN & NOT BETWEEN
 
+#### BETWEEN with simple
+
+    SELECT 
+        d.department_id, 
+        d.department_name
+    FROM departments d
+    WHERE department_id BETWEEN 20 AND 40;
+
+#### NOT BETWEEN with simple
+
+    SELECT 
+        d.department_id, 
+        d.department_name
+    FROM departments d
+    WHERE department_id NOT BETWEEN 20 AND 40;
+
 ### IN & NOT IN
 
     WHERE expression IN (Value 1, Value 2,…Value N)
