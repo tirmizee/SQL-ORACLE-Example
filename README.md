@@ -579,6 +579,14 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 ### LIKE & NOT LIKE
 
+- <b>LIKE</b> : The Oracle LIKE condition allows wildcards to be used in the WHERE clause. This allows you to perform pattern matching.
+- <b>NOT LIKE</b> :
+
+#### LIKE Wildcard
+
+- <b>%</b> : Allows you to match any string of any length (including zero length)
+- <b>_</b> : Allows you to match on a single character
+
 ### UNION & UNION ALL
 
 - <b>UNION</b> : The UNION set operator returns all distinct rows selected by either query. That means any duplicate rows will be removed.
