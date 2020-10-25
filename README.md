@@ -484,6 +484,19 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
     WHERE NOT EXISTS (sub-query)
 
+#### EXISTS with simple 
+
+    SELECT 
+        d.department_id, 
+        d.department_name
+    FROM departments d
+    WHERE EXISTS(
+        SELECT 1 FROM employees e
+        WHERE d.department_id = e.department_id
+    )
+
+#### NOT EXISTS with simple 
+
 ### LIKE & NOT LIKE
 
 ### UNION & UNION ALL
