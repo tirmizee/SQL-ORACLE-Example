@@ -493,6 +493,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
     FROM departments d
     WHERE department_id BETWEEN 20 AND 40;
 
+#### BETWEEN with Date
+
+    -- BETWEEN
+    SELECT 
+        *
+    FROM employees
+    WHERE hiredate BETWEEN TO_DATE 
+    ('1981/02/01', 'yyyy/mm/dd') AND TO_DATE ('2020/02/28', 'yyyy/mm/dd');
+
 #### NOT BETWEEN with simple
 
     SELECT 
@@ -500,6 +509,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
         d.department_name
     FROM departments d
     WHERE department_id NOT BETWEEN 20 AND 40;
+
+#### NOT BETWEEN with Date
+
+    -- NOT BETWEEN
+    SELECT 
+        *
+    FROM employees
+    WHERE hiredate NOT BETWEEN TO_DATE 
+    ('1981/02/01', 'yyyy/mm/dd') AND TO_DATE ('2020/02/28', 'yyyy/mm/dd');
 
 ### IN & NOT IN
 
