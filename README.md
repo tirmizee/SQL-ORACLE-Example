@@ -483,6 +483,30 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
     WHERE expression NOT IN (Value 1, Value 2,…Value N)
 
+### IN with simple
+
+    SELECT 
+        e.department_id, 
+        e.employee_id, 
+        e.employee_name
+    FROM employees e
+    WHERE e.department_id IN (10, 20)
+    ORDER BY e.department_id, e.employee_id;
+
+### IN with subquery
+
+    SELECT 
+        e.department_id, 
+        e.employee_id, 
+        e.employee_name
+    FROM employees e
+    WHERE e.department_id IN (
+        SELECT
+            department_id
+        FROM departments WHERE departments.department_id > 20
+    )
+    ORDER BY e.department_id, e.employee_id;
+
 ### EXISTS & NOT EXISTS
 
     WHERE EXISTS (sub-query)
