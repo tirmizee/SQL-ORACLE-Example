@@ -122,6 +122,9 @@ The DUAL table has one column named DUMMY whose data type is VARCHAR2() and cont
 
 ### LPAD & RPAD 
 
+- <b>LPAD</b> :
+- <b>RPAD</b> :
+
 #### LPAD & RPAD syntax
 
     LPAD( string1, padded_length , [pad_string] )
