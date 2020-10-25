@@ -497,6 +497,15 @@ COALESCE function aims to return a non-NULL value. You must specify at least two
 
 #### NOT EXISTS with simple 
 
+    SELECT 
+        d.department_id, 
+        d.department_name
+    FROM departments d
+    WHERE NOT EXISTS (
+        SELECT 1 FROM employees e
+        WHERE  d.department_id = e.department_id
+    ) ORDER BY d.department_id;
+
 ### LIKE & NOT LIKE
 
 ### UNION & UNION ALL
