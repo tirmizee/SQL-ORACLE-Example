@@ -849,7 +849,7 @@ The MINUS set operator returns all distinct rows selected by the first query but
 
 ### LISTAGG 
 
-    LISTAGG (measure_column , ['delimiter']) WITHIN GROUP (order_by_clause) [OVER (query_partition_clause)]
+    LISTAGG(Column [, Delimiter])WITHIN GROUP (Order by Col_name) [Over(Partition by Col_name)]
 
 #### LISTAGG with simple
 
