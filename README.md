@@ -864,6 +864,10 @@ The MINUS set operator returns all distinct rows selected by the first query but
     GROUP BY deptno
     ORDER BY deptno;
 
+#### LISTAGG issue
+
+- https://stackoverflow.com/questions/50346723/listagg-partition-instead-of-group-by
+
 ### EXTRACT
 
     SELECT
