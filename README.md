@@ -1013,6 +1013,28 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### DATEDIFF
 
+    SELECT 
+        ((SYSDATE+1) - SYSDATE) * 24 AS Hours
+    FROM DUAL;
+
+    SELECT 
+        ((SYSDATE+1) - SYSDATE) * 24 * 60 AS Minutes
+    FROM DUAL;
+
+    SELECT 
+        ((SYSDATE+1) - SYSDATE) * 24 * 60 * 60 AS Seconds
+    FROM DUAL;
+
+    SELECT 
+        TRUNC(MONTHS_BETWEEN(SYSDATE,(SYSDATE-60))) AS Months
+    FROM DUAL;
+
+    SELECT 
+        TRUNC(MONTHS_BETWEEN(SYSDATE,(SYSDATE-600))/12) AS Years,
+        MOD(TRUNC(MONTHS_BETWEEN(SYSDATE,(SYSDATE-600))),12) AS Months,
+        SYSDATE - ADD_MONTHS((SYSDATE-600),TRUNC(MONTHS_BETWEEN(SYSDATE,(SYSDATE-600)))) AS Days
+     FROM DUAL;
+
 ### Reference
 
 - https://oracle-base.com/articles/sql/articles-sql#getting-started
