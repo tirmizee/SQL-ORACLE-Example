@@ -1010,7 +1010,9 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
     SELECT 'Hello' || 'World' FROM DUAL;                     --HelloWorld
     SELECT 'Hello' || 'World' || '2020' FROM DUAL;           --HelloWorld2020
-    
+
+### DATEDIFF
+
 ### Reference
 
 - https://oracle-base.com/articles/sql/articles-sql#getting-started
