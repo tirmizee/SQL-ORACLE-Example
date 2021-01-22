@@ -1038,3 +1038,4 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 ### Reference
 
 - https://oracle-base.com/articles/sql/articles-sql#getting-started
+- https://www.oracletutorial.com/oracle-basics/oracle-identity-column/
