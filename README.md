@@ -120,6 +120,13 @@ The DUAL table has one column named DUMMY whose data type is VARCHAR2() and cont
     SELECT DISTINCT emp_code FROM employee;
     SELECT DISTINCT emp_first_name, emp_last_name FROM employee;
 
+### INITCAP
+
+    SELECT 
+        INITCAP('the soap'),
+        INITCAP('the_soap')
+    FROM DUAL
+
 ### LPAD & RPAD 
 
 - <b>LPAD</b> :
