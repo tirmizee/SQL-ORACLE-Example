@@ -1056,6 +1056,18 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### Subquery multiple column
 
+    SELECT *
+    FROM employees 
+    WHERE (SALARY, EMPLOYEE_NAME) IN (
+        SELECT 
+            e.salary,
+            e.employee_name
+        FROM employees e
+        INNER JOIN departments d ON e.department_id = d.department_id
+        WHERE LOCATION = 'DALLAS'
+        AND e.salary = 3000
+    )
+
 ### Check tablespace size of table 
 
     select segment_name,sum(bytes)/1024/1024/1024 GB from user_segments where segment_type='TABLE' and segment_name=upper('&TABLE_NAME') group by segment_name;
