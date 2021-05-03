@@ -1056,16 +1056,17 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### Subquery multiple column
 
-    SELECT *
-    FROM employees 
-    WHERE (SALARY, EMPLOYEE_NAME) IN (
-        SELECT 
-            e.salary,
-            e.employee_name
-        FROM employees e
-        INNER JOIN departments d ON e.department_id = d.department_id
-        WHERE LOCATION = 'DALLAS'
-        AND e.salary = 3000
+    SELECT
+        BOOK_KEY
+    FROM SALES
+    WHERE (STORE_KEY,  ORDER_DATE) IN (
+        SELECT
+            STORE_KEY,
+            MAX(ORDER_DATE)
+        FROM SALES 
+        JOIN STORE USING (STORE_KEY)
+        WHERE STORE_STATE = 'SC'
+        GROUP BY STORE_KEY
     )
 
 ### Check tablespace size of table 
