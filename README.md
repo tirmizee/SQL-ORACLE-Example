@@ -1048,6 +1048,8 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### Subquery single row
 
+    SELECT * FROM employees WHERE department_id = (SELECT department_id FROM departments WHERE department_name = 'ACCOUNTING')
+
 ### Subquery multiple row
 
 ### Subquery multiple column
