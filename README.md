@@ -814,6 +814,10 @@ The MINUS set operator returns all distinct rows selected by the first query but
         COUNT(comm) AS count_comm
     FROM emp_salary;
 
+#### COUNT with DISTINCT
+
+    SELECT COUNT(DISTINCT JOB) FROM employees 
+
 #### COUNT field with GROUP BY
 
     SELECT
