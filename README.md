@@ -1046,6 +1046,10 @@ The TRUNC (date) function is used to get the date with the time portion of the d
         SYSDATE - ADD_MONTHS((SYSDATE-600),TRUNC(MONTHS_BETWEEN(SYSDATE,(SYSDATE-600)))) AS Days
      FROM DUAL;
 
+### Subquery single row
+
+### Subquery multiple row
+
 ### Check tablespace size of table 
 
     select segment_name,sum(bytes)/1024/1024/1024 GB from user_segments where segment_type='TABLE' and segment_name=upper('&TABLE_NAME') group by segment_name;
