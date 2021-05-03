@@ -1068,6 +1068,22 @@ The TRUNC (date) function is used to get the date with the time portion of the d
         WHERE STORE_STATE = 'SC'
         GROUP BY STORE_KEY
     )
+    
+    --
+    
+    SELECT 
+        ORD_NUM, 
+        AGENT_CODE, 
+        ORD_DATE, 
+        ORD_AMOUNT
+    FROM ORDERS
+    WHERE (AGENT_CODE, ORD_AMOUNT) IN (
+        SELECT 
+            AGENT_CODE, 
+            MIN(ORD_AMOUNT)
+        FROM ORDERS 
+        GROUP BY AGENT_CODE
+    )
 
 ### Check tablespace size of table 
 
