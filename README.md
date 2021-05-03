@@ -1052,6 +1052,8 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### Subquery multiple row
 
+    SELECT * FROM employees WHERE department_id IN (SELECT department_id FROM departments WHERE department_name LIKE '%S%')
+
 ### Subquery multiple column
 
 ### Check tablespace size of table 
