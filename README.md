@@ -1083,6 +1083,14 @@ The TRUNC (date) function is used to get the date with the time portion of the d
         GROUP BY AGENT_CODE
     )
 
+### DEFAULT
+
+    CREATE TABLE temp (
+        emp_no VARCHAR2(20),
+        emp_name VARCHAR2(20) DEFAULT 'SYSTEM',
+        salary NUMBER(6) DEFAULT 0
+    );
+
 ### CHECK Contraint
 
     CREATE TABLE temp (
