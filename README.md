@@ -1098,6 +1098,13 @@ The TRUNC (date) function is used to get the date with the time portion of the d
         salary NUMBER(6) CHECK (salary BETWEEN 1000 AND 2000)
     );
 
+### LIST ALL SCHEMA
+
+    SELECT DISTINCT OWNER
+      FROM DBA_OBJECTS
+     WHERE OBJECT_TYPE = 'TABLE'
+       AND OWNER LIKE '%SERVICE'
+
 ### Check tablespace size of table 
 
     select segment_name,sum(bytes)/1024/1024/1024 GB from user_segments where segment_type='TABLE' and segment_name=upper('&TABLE_NAME') group by segment_name;
