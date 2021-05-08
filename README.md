@@ -1100,10 +1100,12 @@ The TRUNC (date) function is used to get the date with the time portion of the d
 
 ### LIST ALL SCHEMA
 
-    SELECT DISTINCT OWNER
-      FROM DBA_OBJECTS
-     WHERE OBJECT_TYPE = 'TABLE'
-       AND OWNER LIKE '%SERVICE'
+    SELECT DISTINCT OWNER, OBJECT_NAME 
+    FROM DBA_OBJECTS
+    WHERE OBJECT_TYPE = 'TABLE'
+    AND OWNER LIKE '%SERVICE'
+    ORDER BY OWNER;
+   
 
 ### Check tablespace size of table 
 
